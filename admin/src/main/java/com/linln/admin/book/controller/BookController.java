@@ -26,6 +26,7 @@ import java.util.List;
 /**
  * @author 侯瑞皓
  * @date 2020/05/26
+ * @description 书籍管理操作
  */
 @Controller
 @RequestMapping("/book")
@@ -83,6 +84,7 @@ public class BookController {
     @RequiresPermissions({"book:add", "book:edit"})
     @ResponseBody
     public ResultVo save(@Validated BookValid valid, Book book) {
+
         // 复制保留无需修改的数据
         if (book.getId() != null) {
             Book beBook = bookService.getById(book.getId());
