@@ -107,7 +107,7 @@ public class BookController {
     }
 
     /**
-     * 设置一条或者多条数据的状态
+     *  设置一条或者多条数据的状态
      */
     @RequestMapping("/status/{param}")
     @RequiresPermissions("book:status")
